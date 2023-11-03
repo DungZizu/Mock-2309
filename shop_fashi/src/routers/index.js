@@ -2,7 +2,8 @@ import BlogPage from "../pages/BlogPage/BlogPage";
 import CollectionPage from "../pages/CollectionPage/CollectionPage";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import HomePage from "../pages/HomePage/HomePage";
-import PageAll from "../pages/PagesAll/PageAll";
+import Login from "../pages/LoginPage/Login";
+import Register from "../pages/RegisterPage/Register";
 import ShopPage from "../pages/ShopPage/ShopPage";
 
 export const routers = [
@@ -32,9 +33,14 @@ export const routers = [
         isShowHearder: true,
     },
     {
-        path: "/Pages",
-        page: PageAll,
+        path: "/register",
+        page: Register,
         isShowHearder: true,
+    },
+    {
+        path: "/login",
+        page: Login,
+        isShowHearder : true,
     }
 
 ]

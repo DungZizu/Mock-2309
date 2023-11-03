@@ -12,7 +12,7 @@ import {
   MenuUnfoldOutlined,
   DownOutlined,
 } from "@ant-design/icons";
-import { Image } from "antd";
+import { Badge, Image } from "antd";
 import LogoShop from "../../assets/Images/logo.png";
 import LogoPay from "../../assets/Images/payment-method.png";
 import { Link } from "react-router-dom";
@@ -50,8 +50,8 @@ const HeaderComponent = () => {
             </div>
           </div>
           <div className="ht-right">
-            <a
-              href="#"
+            <Link
+              to={`/login`}
               className="login-panel"
               style={{ textDecoration: "none" }}
             >
@@ -65,7 +65,7 @@ const HeaderComponent = () => {
                 }}
               />
               Login
-            </a>
+            </Link>
             <div className="top-social">
               <a href="#">
                 <FacebookFilled />
@@ -108,67 +108,25 @@ const HeaderComponent = () => {
             </div>
             <div className="col-lg-3 text-right col-md-3">
               <ul className="nav-right">
-                <li className="heart-icon">
-                  <a href="#">
-                    <HeartOutlined style={{ color: "#00000" }} />
-                    <span>1</span>
-                  </a>
+                <li>
+                  <Link to={"#"}>
+                    <Badge count={1} size="small">
+                      <HeartOutlined
+                        style={{ color: "#252525", fontSize: "24px" }}
+                      />
+                    </Badge>
+                  </Link>
                 </li>
-                <li className="cart-icon">
-                  <a href="#">
-                    <ShoppingCartOutlined style={{ color: "#00000" }} />
-                    <span>3</span>
-                  </a>
-                  <div className="cart-hover">
-                    <div className="select-items">
-                      <table>
-                        <tbody>
-                          <tr>
-                            <td className="si-pic">
-                              <img src="img/select-product-1.jpg" alt="" />
-                            </td>
-                            <td className="si-text">
-                              <div className="product-selected">
-                                <p>$60.00 x 1</p>
-                                <h6>Kabino Bedside Table</h6>
-                              </div>
-                            </td>
-                            <td className="si-close">
-                              <i className="ti-close" />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="si-pic">
-                              <img src="img/select-product-2.jpg" alt="" />
-                            </td>
-                            <td className="si-text">
-                              <div className="product-selected">
-                                <p>$60.00 x 1</p>
-                                <h6>Kabino Bedside Table</h6>
-                              </div>
-                            </td>
-                            <td className="si-close">
-                              <i className="ti-close" />
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div className="select-total">
-                      <span>total:</span>
-                      <h5>$120.00</h5>
-                    </div>
-                    <div className="select-button">
-                      <a href="#" className="primary-btn view-card">
-                        VIEW CARD
-                      </a>
-                      <a href="#" className="primary-btn checkout-btn">
-                        CHECK OUT
-                      </a>
-                    </div>
-                  </div>
+                <li>
+                  <Link to={"#"}>
+                    <Badge count={3} size="small">
+                      <ShoppingCartOutlined
+                        style={{ color: "#252525", fontSize: "24px" }}
+                      />
+                    </Badge>
+                  </Link>
                 </li>
-                <li className="cart-price">$150.00</li>
+                <li class="cart-price">$150.00</li>
               </ul>
             </div>
           </div>
@@ -178,48 +136,32 @@ const HeaderComponent = () => {
         <div className="container">
           <div className="nav-depart">
             <div className="depart-btn">
-              <MenuUnfoldOutlined />
+              <i className="ti-menu" />
               <span>All departments</span>
               <ul className="depart-hover">
                 <li className="active">
-                  <a href="#" style={{ textDecoration: "none" }}>
-                    Women’s Clothing
-                  </a>
+                  <a href="#">Women’s Clothing</a>
                 </li>
                 <li>
-                  <a href="#" style={{ textDecoration: "none" }}>
-                    Men’s Clothing
-                  </a>
+                  <a href="#">Men’s Clothing</a>
                 </li>
                 <li>
-                  <a href="#" style={{ textDecoration: "none" }}>
-                    Underwear
-                  </a>
+                  <a href="#">Underwear</a>
                 </li>
                 <li>
-                  <a href="#" style={{ textDecoration: "none" }}>
-                    Kid's Clothing
-                  </a>
+                  <a href="#">Kid's Clothing</a>
                 </li>
                 <li>
-                  <a href="#" style={{ textDecoration: "none" }}>
-                    Brand Fashion
-                  </a>
+                  <a href="#">Brand Fashion</a>
                 </li>
                 <li>
-                  <a href="#" style={{ textDecoration: "none" }}>
-                    Accessories/Shoes
-                  </a>
+                  <a href="#">Accessories/Shoes</a>
                 </li>
                 <li>
-                  <a href="#" style={{ textDecoration: "none" }}>
-                    Luxury Brands
-                  </a>
+                  <a href="#">Luxury Brands</a>
                 </li>
                 <li>
-                  <a href="#" style={{ textDecoration: "none" }}>
-                    Brand Outdoor Apparel
-                  </a>
+                  <a href="#">Brand Outdoor Apparel</a>
                 </li>
               </ul>
             </div>
@@ -227,51 +169,51 @@ const HeaderComponent = () => {
           <nav className="nav-menu mobile-menu">
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to={`/`}>Home</Link>
               </li>
               <li>
-                <Link to="/shop">Shop</Link>
+                <Link to={`/shop`}>Shop</Link>
               </li>
               <li>
-                <Link to="/collection">Collection</Link>
+                <Link to={`/collection`}>Collection</Link>
                 <ul className="dropdown">
                   <li>
-                    <Link to="/#">Men's</Link>
+                    <a href="#">Men's</a>
                   </li>
                   <li>
-                    <Link to="/#">Women's</Link>
+                    <a href="#">Women's</a>
                   </li>
                   <li>
-                    <Link to="/#">Kid's</Link>
+                    <a href="#">Kid's</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link to="/blogs">Blog</Link>
+                <Link to={`/blogs`}>Blog</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to={`/contact`}>Contact</Link>
               </li>
               <li>
-                <Link to="/Pages">Pages</Link>
+                <Link to={`#`}>Pages</Link>
                 <ul className="dropdown">
                   <li>
-                    <a href="./blog-details.html">Blog Details</a>
+                    <Link to={`#`}>Blog Details</Link>
                   </li>
                   <li>
-                    <a href="./shopping-cart.html">Shopping Cart</a>
+                    <Link to={`#`}>Shopping Cart</Link>
                   </li>
                   <li>
-                    <a href="./check-out.html">Checkout</a>
+                    <Link to={`#`}>Checkout</Link>
                   </li>
                   <li>
-                    <a href="./faq.html">Faq</a>
+                    <Link to={`#`}>Faq</Link>
                   </li>
                   <li>
-                    <a href="./register.html">Register</a>
+                    <Link to={`/register`}>Register</Link>
                   </li>
                   <li>
-                    <a href="./login.html">Login</a>
+                    <Link to={`/login`}>Login</Link>
                   </li>
                 </ul>
               </li>

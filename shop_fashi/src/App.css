@@ -36,7 +36,8 @@ body {
 	height: 100%;
 	font-family: "Muli", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
+	/* font-smoothing: antialiased; */
+	text-decoration: none;
 }
 
 h1,
@@ -49,6 +50,7 @@ h6 {
 	color: #111111;
 	font-weight: 400;
 	font-family: "Muli", sans-serif;
+	text-decoration: none;
 }
 
 h1 {
@@ -730,6 +732,7 @@ ol {
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
+	text-decoration: none;
 }
 
 .nav-item .nav-depart .depart-btn .depart-hover li a:hover {
@@ -765,10 +768,12 @@ ol {
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
+	text-decoration: none;
 }
 
 .nav-item .nav-menu li:hover>a {
 	background: #e7ab3c;
+	text-decoration: none;
 }
 
 .nav-item .nav-menu li:hover .dropdown {
@@ -799,12 +804,14 @@ ol {
 .nav-item .nav-menu li .dropdown li:hover>a {
 	background: transparent;
 	color: #e7ab3c;
+	text-decoration: none;
 }
 
 .nav-item .nav-menu li .dropdown li a {
 	border-right: 0;
 	padding: 13px 20px 12px 30px;
 	text-transform: capitalize;
+	text-decoration: none;
 }
 
 .slicknav_menu {
@@ -3130,6 +3137,7 @@ ol {
 	font-size: 16px;
 	color: #636363;
 	line-height: 39px;
+	text-decoration: none;
 }
 
 .blog-sidebar .recent-post {
@@ -3201,6 +3209,7 @@ ol {
 	margin-right: 5px;
 	margin-bottom: 9px;
 	border-radius: 2px;
+	text-decoration: none;
 }
 
 .blog-item {
@@ -3215,6 +3224,10 @@ ol {
 	padding-top: 24px;
 }
 
+.blog-item .bi-text Link{
+	text-decoration: none;
+}
+
 .blog-item .bi-text h4 {
 	color: #252525;
 	font-weight: 700;
@@ -3222,6 +3235,7 @@ ol {
 	margin-bottom: 16px;
 }
 
+ 
 .blog-item .bi-text p {
 	margin-bottom: 0;
 	font-size: 14px;
